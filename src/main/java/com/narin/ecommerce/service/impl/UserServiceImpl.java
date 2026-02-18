@@ -1,6 +1,5 @@
 package com.narin.ecommerce.service.impl;
 
-import com.narin.ecommerce.dto.UserRequest;
 import com.narin.ecommerce.entity.User;
 import com.narin.ecommerce.service.UserService;
 import org.springframework.data.domain.Page;
@@ -12,10 +11,10 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Override
+    /*@Override
     public User create(UserRequest req) {
         return null;
-    }
+    }*/
 
     @Override
     public User getById(Long id) {

@@ -45,6 +45,7 @@ public class Product {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
+    @Column(nullable = false)
     private Boolean deleted = false;
 
     // Many Product → One Category

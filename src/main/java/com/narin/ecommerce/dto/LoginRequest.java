@@ -3,8 +3,8 @@ package com.narin.ecommerce.dto;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 public class LoginRequest {
     private String username;
     private String password;
