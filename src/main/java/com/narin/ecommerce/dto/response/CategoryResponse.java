@@ -1,4 +1,4 @@
-package com.narin.ecommerce.dto;
+package com.narin.ecommerce.dto.response;
 
 import lombok.Builder;
 import lombok.Getter;

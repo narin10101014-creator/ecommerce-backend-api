@@ -1,4 +1,4 @@
-package com.narin.ecommerce.dto;
+package com.narin.ecommerce.dto.request;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
@@ -6,7 +6,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UpdateCartItemRequest {
+public class AddToCartRequest {
+    @NotNull
+    private Long productId;
+
     @NotNull
     private Integer quantity;
 }

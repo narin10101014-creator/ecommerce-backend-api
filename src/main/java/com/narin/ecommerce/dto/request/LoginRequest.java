@@ -1,4 +1,4 @@
-package com.narin.ecommerce.dto;
+package com.narin.ecommerce.dto.request;
 
 import lombok.Getter;
 import lombok.Setter;

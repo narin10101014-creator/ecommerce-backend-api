@@ -1,6 +1,6 @@
 package com.narin.ecommerce.mapper;
 
-import com.narin.ecommerce.dto.CreateProductResponse;
+import com.narin.ecommerce.dto.response.CreateProductResponse;
 import com.narin.ecommerce.entity.Product;
 
 public class ProductMapper {

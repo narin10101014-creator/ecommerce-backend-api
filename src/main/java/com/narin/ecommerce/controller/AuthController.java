@@ -1,7 +1,7 @@
 package com.narin.ecommerce.controller;
 
-import com.narin.ecommerce.dto.LoginRequest;
-import com.narin.ecommerce.dto.RegisterRequest;
+import com.narin.ecommerce.dto.request.LoginRequest;
+import com.narin.ecommerce.dto.request.RegisterRequest;
 import com.narin.ecommerce.service.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

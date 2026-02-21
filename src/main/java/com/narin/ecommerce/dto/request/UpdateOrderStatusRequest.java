@@ -1,4 +1,4 @@
-package com.narin.ecommerce.dto;
+package com.narin.ecommerce.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CreateCategoryRequest {
+public class UpdateOrderStatusRequest {
     @NotBlank
-    private String name;
+    private String status;
 }

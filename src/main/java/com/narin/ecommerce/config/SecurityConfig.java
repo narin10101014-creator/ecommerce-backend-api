@@ -39,7 +39,9 @@ public class SecurityConfig {
 
                         // Product
                         .requestMatchers(HttpMethod.GET, ApiPaths.PRODUCTS).permitAll()
-                        .requestMatchers(ApiPaths.PRODUCTS).hasRole(Roles.ADMIN)
+                        .requestMatchers(HttpMethod.POST, ApiPaths.PRODUCTS).hasRole(Roles.ADMIN)
+                        .requestMatchers(HttpMethod.PUT, ApiPaths.PRODUCTS).hasRole(Roles.ADMIN)
+                        .requestMatchers(HttpMethod.DELETE, ApiPaths.PRODUCTS).hasRole(Roles.ADMIN)
 
                         // User
                         .requestMatchers(ApiPaths.USERS).authenticated()

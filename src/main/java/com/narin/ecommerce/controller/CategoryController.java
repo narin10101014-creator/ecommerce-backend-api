@@ -1,7 +1,7 @@
 package com.narin.ecommerce.controller;
 
-import com.narin.ecommerce.dto.CreateCategoryRequest;
-import com.narin.ecommerce.dto.UpdateCategoryRequest;
+import com.narin.ecommerce.dto.request.CreateCategoryRequest;
+import com.narin.ecommerce.dto.request.UpdateCategoryRequest;
 import com.narin.ecommerce.entity.Category;
 import com.narin.ecommerce.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;

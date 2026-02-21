@@ -1,7 +1,6 @@
 package com.narin.ecommerce.service;
 
-import com.narin.ecommerce.dto.RegisterRequest;
-import com.narin.ecommerce.entity.User;
+import com.narin.ecommerce.dto.request.RegisterRequest;
 
 public interface AuthService {
     void register(RegisterRequest request);

@@ -1,8 +1,9 @@
 package com.narin.ecommerce.controller;
 
-import com.narin.ecommerce.dto.CreateProductRequest;
-import com.narin.ecommerce.dto.CreateProductResponse;
-import com.narin.ecommerce.dto.UpdateProductRequest;
+import com.narin.ecommerce.dto.request.CreateProductRequest;
+import com.narin.ecommerce.dto.response.CreateProductResponse;
+import com.narin.ecommerce.dto.request.UpdateProductRequest;
+import com.narin.ecommerce.dto.response.ProductResponse;
 import com.narin.ecommerce.entity.Product;
 import com.narin.ecommerce.mapper.ProductMapper;
 import com.narin.ecommerce.service.impl.ProductServiceImpl;
@@ -37,7 +38,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getAll() {
+    public List<ProductResponse> getAll() {
         return productService.getAll();
     }
 

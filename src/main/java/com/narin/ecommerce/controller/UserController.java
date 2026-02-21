@@ -1,6 +1,6 @@
 package com.narin.ecommerce.controller;
 
-import com.narin.ecommerce.dto.UpdateRoleRequest;
+import com.narin.ecommerce.dto.request.UpdateRoleRequest;
 import com.narin.ecommerce.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

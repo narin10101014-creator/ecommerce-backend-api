@@ -1,7 +1,6 @@
 package com.narin.ecommerce.service.impl;
 
-import com.narin.ecommerce.config.SecurityConfig;
-import com.narin.ecommerce.dto.RegisterRequest;
+import com.narin.ecommerce.dto.request.RegisterRequest;
 import com.narin.ecommerce.entity.User;
 import com.narin.ecommerce.enums.Role;
 import com.narin.ecommerce.exception.DuplicateUserException;
@@ -36,7 +35,7 @@ public class AuthServiceImpl implements AuthService {
                 .username(request.getUsername())
                 .email(request.getEmail())
                 .password(encodedPassword)
-                .role(Role.ROLE_USER) // default
+                .role(Role.USER) // default
                 .createdAt(LocalDateTime.now())
                 .build();
         userRepository.save(user);

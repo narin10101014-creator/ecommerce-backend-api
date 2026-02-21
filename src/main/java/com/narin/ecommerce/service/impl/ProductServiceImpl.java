@@ -1,17 +1,16 @@
 package com.narin.ecommerce.service.impl;
 
-import com.narin.ecommerce.dto.CreateProductRequest;
-import com.narin.ecommerce.dto.UpdateProductRequest;
+import com.narin.ecommerce.dto.request.CreateProductRequest;
+import com.narin.ecommerce.dto.request.UpdateProductRequest;
+import com.narin.ecommerce.dto.response.ProductResponse;
 import com.narin.ecommerce.entity.Category;
 import com.narin.ecommerce.entity.Product;
 import com.narin.ecommerce.repository.CategoryRepository;
 import com.narin.ecommerce.repository.ProductRepository;
 import com.narin.ecommerce.service.ProductService;
-import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -80,8 +79,17 @@ public class ProductServiceImpl implements ProductService {
                 .orElseThrow(() -> new RuntimeException("Product not found"));
     }
     @Override
-    public List<Product> getAll() {
-        return productRepository.findByDeletedFalse();
+    public List<ProductResponse> getAll() {
+        return productRepository.findByDeletedFalse()
+                .stream()
+                .map(p -> new ProductResponse(
+                        p.getId(),
+                        p.getName(),
+                        p.getDescription(),
+                        p.getPrice(),
+                        p.getStock(),
+                        p.getCategory().getName()
+                ))
+                .toList();
     }
-
 }
