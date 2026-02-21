@@ -67,12 +67,21 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public void delete(Long id) {
+        Product product = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+        product.setDeleted(true); //Soft Delete
+        productRepository.save(product);
+    }
+
+    @Override
     public Product getById(Long id) {
-        return productRepository.findById(id)
+        return productRepository.findById(id).filter(p -> !p.getDeleted())
                 .orElseThrow(() -> new RuntimeException("Product not found"));
     }
     @Override
     public List<Product> getAll() {
-        return productRepository.findAll();
+        return productRepository.findByDeletedFalse();
     }
+
 }

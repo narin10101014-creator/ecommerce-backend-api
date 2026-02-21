@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class JwtUtil {
     private static final String SECRET = "this-is-a-very-secure-secret-key-123456";
-    public static String generateToken(String username) {
+    public static String    generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)
                 .setIssuedAt(new Date())

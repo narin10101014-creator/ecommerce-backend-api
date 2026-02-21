@@ -42,6 +42,7 @@ public class Product {
         this.createdAt = LocalDateTime.now();
     }
 
+    @Builder.Default
     @Column(nullable = false)
     private Boolean deleted = false;
 
